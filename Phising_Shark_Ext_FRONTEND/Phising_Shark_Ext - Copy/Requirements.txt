@@ -1,0 +1,16 @@
+# to build the project
+ng build
+
+# Install chrome packages
+npm install -D @types/chrome
+
+# its required to add the below lines to the tsconfig.json file under compilerOptions
+"typeRoots": [
+      "node_modules/@types"
+    ],
+"types": [
+    "chrome"
+]
+
+# to install PDF library
+npm install jspdf --save

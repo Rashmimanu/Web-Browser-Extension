@@ -1,0 +1,26 @@
+{
+    "manifest_version": 3,
+    "name": "Phishing Shark Ext",
+    "description": "Phishing attack detector",
+    "version": "1.0",
+    "action": {
+        "default_popup": "index.html"
+    },
+    "permissions": [
+        "activeTab",
+        "scripting",
+        "storage"
+        
+    ],
+    "host_permissions": [
+        "http://*/*",
+        "https://*/*",
+        "*://*/*"
+    ],
+    "icons": {
+        "16": "assets/images/phish.png",
+        "48": "assets/images/phish.png",
+        "128": "assets/images/phish.png"
+    }
+}
+

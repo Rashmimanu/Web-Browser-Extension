@@ -1,0 +1,34 @@
+<script src="../../../assets/scrape.js"></script>
+
+<div ng-show="imageSource === null">
+  <div class="card" style="width: 25rem">
+    <div class="card-body">
+      <img [src]="imageSource" class="card-img-top" alt="..."/>
+      <h5 class="card-title">{{ mainTitle }}</h5>
+      <p class="card-text">{{ mainDescription }}</p>
+
+      <div *ngIf="email_visiblity">
+        <p>Email status: <span [ngClass]="email_secure_status">{{ email_secure_text }}</span></p>
+      </div>
+
+      <button type="button" class="btn btn-success" style="padding: 1%;" (click)="growData()">Help to improve (count: {{dataset_count}})</button>
+      &nbsp;
+      <button type="button" class="btn btn-secondary" style="padding: 1%;" (click)="addToWhitelist()">Whitelist</button>
+      &nbsp;
+      <button type="button" class="btn btn-secondary" style="padding: 1%;" (click)="addToBlacklist()">Blacklist</button>
+      &nbsp;
+
+      <div class="btn-group" role="group" style="padding: 1%;" aria-label="Basic outlined example">
+        <button type="button" class="btn btn-outline-primary" (click)="seeReport()">G-Report</button>
+        <button *ngIf="email_visiblity" type="button" class="btn btn-outline-primary" (click)="emailReport()">E-Report</button>
+        <button type="button" class="btn btn-outline-primary" (click)="manualCheck()">M-Check</button>
+      </div>
+
+      <div class="btn-group" role="group" style="padding: 1%;" aria-label="Basic outlined example">
+        <button type="button" class="btn btn-outline-primary" (click)="howToPrevent()">Prevent</button>
+        <button type="button" class="btn btn-outline-primary">About us</button>
+        <button type="button" class="btn btn-outline-primary">Privacy Policies</button>
+      </div>
+    </div>
+  </div>
+</div>

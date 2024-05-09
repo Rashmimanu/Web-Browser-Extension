@@ -1,0 +1,27 @@
+<div>
+    <div class="card" style="width: 25rem;">
+        <div class="card-body">
+          <p class="card-text">Here you can check the email prediction results</p>
+
+          <table #reportTable2 class="table table-bordered">
+            <thead>
+              <tr>
+                <th scope="col">Email Domain</th>
+                <th scope="col">Status</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr *ngFor="let data of this.report_table_data">
+                <td >{{data[0]}}</td>
+                <td>{{data[1]}}</td>
+              </tr>
+            </tbody>
+            
+          </table>
+          
+          <a class="btn btn-primary" (click)="goToBackPage()">Go back</a>
+          &nbsp;
+          <a class="btn btn-success" (click)="downloadPDF()">Download report</a>
+        </div>
+    </div>
+</div>

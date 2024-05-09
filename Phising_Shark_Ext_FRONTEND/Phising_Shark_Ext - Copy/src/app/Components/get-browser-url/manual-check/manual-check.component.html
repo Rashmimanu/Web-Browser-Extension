@@ -1,0 +1,30 @@
+<div>
+    <div class="card" style="width: 25rem;">
+        <!-- <img src="../../../assets/images/check-green.gif" class="card-img-top" alt="..."> -->
+        <div class="card-body">
+          <h5 class="card-title">Manual Check</h5>
+          <p class="card-text">Enter the URL you want to check the status</p>
+
+          <form>
+            <div class="form-group">
+              <label for="exampleInputEmail1">Web URL</label>
+              <input type="text" class="form-control" id="exampleInputEmail1" aria-describedby="textHelp" placeholder="Type here" name="webURL" [(ngModel)]="webURL">
+              
+              &nbsp;
+
+              <div *ngIf="m_check_visibility">
+                <p>URL status: <span [ngClass]="m_check_class">{{ m_check_secure_text }}</span></p>
+              </div>
+            </div>
+            <i class="bi bi-arrow-left-circle"></i>
+            <button type="submit" class="btn btn-primary" (click)="goToBackPage()">Go back</button>
+
+            &nbsp;
+            &nbsp;
+            
+            <button type="submit" class="btn btn-success" (click)="checkUrl()">Check</button>
+            <button type="submit" class="btn btn-link" (click)="howToPrevent()">How to prevent</button>
+          </form>
+        </div>
+    </div>
+</div>
